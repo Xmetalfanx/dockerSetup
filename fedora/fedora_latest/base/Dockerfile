@@ -1,4 +1,4 @@
-FROM fedora:32
+FROM fedora:latest
 MAINTAINER xmetal Xmetalfanx@yahoo.com
 
 # Determine fastest Mirror for dnf
@@ -11,4 +11,4 @@ RUN dnf upgrade -y
 RUN dnf install curl wget redhat-lsb-core nano git inxi -y
 
 # get scripts 
-RUN git clone -b arrayTestingEOL https://github.com/Xmetalfanx/linuxSetup.git /home/
+# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup

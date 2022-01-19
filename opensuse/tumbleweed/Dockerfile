@@ -10,5 +10,5 @@ RUN zypper dup
 # Some software needed for my scripts
 RUN zypper --non-interactive install curl wget lsb-release nano git inxi
 
-# get scripts 
-# RUN git clone -b arrayTestingEOL https://github.com/Xmetalfanx/linuxSetup.git /home/
+# get scripts
+# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup

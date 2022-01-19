@@ -1,5 +1,5 @@
 
-FROM opensuse/leap:15.1
+FROM opensuse/leap:15.3
 #FROM opensuse/tumbleweed
 
 MAINTAINER xmetal Xmetalfanx@yahoo.com
@@ -13,5 +13,5 @@ RUN zypper up
 # Some software needed for my scripts
 RUN zypper --non-interactive install curl wget lsb-release nano git inxi
 
-# get scripts 
-# RUN git clone -b arrayTestingEOL https://github.com/Xmetalfanx/linuxSetup.git /home/
+# get scripts
+# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup

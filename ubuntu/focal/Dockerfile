@@ -18,6 +18,5 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 # nano for editing ... not needed by scripts
 RUN apt-get install -y curl wget lsb nano git inxi 
 
-# get scripts 
-RUN git clone -b arrayTestingEOL https://github.com/Xmetalfanx/linuxSetup.git /home/
-RUN cd linuxSetup
+# get scripts
+# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup
