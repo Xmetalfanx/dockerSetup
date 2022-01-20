@@ -25,3 +25,15 @@ RUN zypper --non-interactive install curl wget lsb-release nano git inxi
 #WORKDIR /home/linuxSetup/
 
 ```
+
+## Naming Conventions for repos 
+
+- examples
+  - xmetal/distrobase:description
+  - xmetal/ubuntu:focal_base
+
+## Thoughs/Brainstorm 
+- an "issue" i see is that the images install some things needed for my scripts to work but my scripts SHOULD install those things anyway 
+  - should I comment the lines to install those things in the Dockerfile out?  or since i know they work everytime I have tested something else out, to leave that "as-is" since it may not matter ... if i did comment those lines out in my Dockerfiles, as soon as I git clone and run my scripts the same exact things would be installed anyway
+  - the POINT is that I know my script's code to install those things does work 
+
