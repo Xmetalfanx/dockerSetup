@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:34
 MAINTAINER xmetal Xmetalfanx@yahoo.com
 
 # Determine fastest Mirror for dnf
