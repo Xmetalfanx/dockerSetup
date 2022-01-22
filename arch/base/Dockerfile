@@ -1,5 +1,5 @@
 FROM archlinux
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 RUN pacman -Syy 
 

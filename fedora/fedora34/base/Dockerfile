@@ -1,5 +1,5 @@
 FROM fedora:34
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Determine fastest Mirror for dnf
 RUN su -c 'echo "fastestmirror=true" >> /etc/dnf/dnf.conf'

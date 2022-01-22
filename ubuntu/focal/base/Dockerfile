@@ -1,5 +1,5 @@
 FROM ubuntu:focal
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Update the system
 RUN apt-get -y update

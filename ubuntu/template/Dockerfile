@@ -1,5 +1,5 @@
-FROM ubuntu:
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+FROM ubuntu
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Update the system
 RUN apt-get -y update

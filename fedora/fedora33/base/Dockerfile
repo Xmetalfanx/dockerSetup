@@ -1,5 +1,5 @@
 FROM fedora:33
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Determine fastest Mirror for dnf
 # Makes updates and install faster 

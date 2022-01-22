@@ -1,8 +1,8 @@
 
-FROM opensuse/leap:
+FROM opensuse/leap:15.3
 #FROM opensuse/tumbleweed
 
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Upgrade 
 # up for leap 

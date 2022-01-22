@@ -1,14 +1,11 @@
+FROM opensuse/tumbleweed 
 
-FROM opensuse/leap:15.3
-#FROM opensuse/tumbleweed
-
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Upgrade 
 # up for leap 
 # dup for tumbleweed 
-RUN zypper up
-#RUN zypper dup 
+RUN zypper dup 
 
 # Some software needed for my scripts
 RUN zypper --non-interactive install curl wget lsb-release nano git inxi
