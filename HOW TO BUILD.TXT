@@ -1,0 +1,3 @@
+note to self: 
+
+example - sudo docker build  -t xmetal/opensuse:leap153_base .
