@@ -1,1 +1,1 @@
-remember the template dockerfile i will have the intial tag missing ..
+remember the template dockerfile i will have the initial tag missing ..

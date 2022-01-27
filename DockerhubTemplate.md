@@ -11,7 +11,7 @@ These are basically the ubuntu Image that is named + updating/upgrading + adding
 
 ```
 FROM opensuse/tumbleweed
-MAINTAINER xmetal Xmetalfanx@yahoo.com
+LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Upgrade
 RUN zypper dup
