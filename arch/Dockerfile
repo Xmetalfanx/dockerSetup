@@ -1,7 +1,7 @@
 FROM archlinux
 LABEL maintainer="Xmetalfanx@yahoo.com"
 
-RUN pacman -Syy 
+RUN pacman -Syy
 
 # Install package needed to optimize repos
 RUN pacman --noconfirm -S pacman-contrib
