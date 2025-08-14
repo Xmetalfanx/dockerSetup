@@ -11,10 +11,18 @@ jobs:
     strategy:
       matrix:
         distro-version:
+          - arch
+          # Debian stable 
+          - debian
+          - fedora-41
+          - fedora-42
+          - opensuse-leap156
+          - opensuse-tumbleweed
           - ubuntu-focal
           - ubuntu-noble
-          - debian-bullseye
-          - debian-bookworm
+          
+          #  - debian-bullseye
+          #  - debian-bookworm
           # add other distro-version combinations as needed
 
     steps:
