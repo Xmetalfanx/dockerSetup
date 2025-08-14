@@ -2,7 +2,7 @@ FROM fedora:42
 LABEL maintainer="Xmetalfanx@yahoo.com"
 
 # Determine fastest Mirror for dnf
-RUN su -c 'echo "fastestmirror=true" >> /etc/dnf/dnf.conf'
+RUN echo "fastestmirror=true" >> /etc/dnf/dnf.conf
 
 # Upgrade 
 RUN dnf upgrade -y
