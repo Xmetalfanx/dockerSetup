@@ -17,7 +17,7 @@ LABEL maintainer="Xmetalfanx@yahoo.com"
 RUN zypper dup
 
 # Some software needed for my scripts
-RUN zypper --non-interactive install curl wget lsb-release nano git inxi
+RUN zypper --non-interactive install curl wget lsb-release git inxi
 
 # get scripts
 # COMMENTED OUT for now but this would get my scripts and put you in the script's directory

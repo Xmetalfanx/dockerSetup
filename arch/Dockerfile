@@ -16,7 +16,7 @@ RUN rankmirrors -v -n 6 /etc/pacman.d/mirrorlist.backup | tee /etc/pacman.d/mirr
 RUN pacman --noconfirm -Syyu
 
 # Some software needed for my scripts
-RUN pacman --noconfirm -S curl wget lsb-release nano git 
+RUN pacman --noconfirm -S curl wget lsb-release  git 
 
 # inxi is in the AUR
 

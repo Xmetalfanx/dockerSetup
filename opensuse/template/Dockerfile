@@ -13,7 +13,7 @@ RUN zypper up
 
 
 # Some software needed for my scripts
-RUN zypper install curl wget redhat-lsb-core nano git inxi -y
+RUN zypper install curl wget redhat-lsb-core  git inxi -y
 
 # get scripts 
 RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/

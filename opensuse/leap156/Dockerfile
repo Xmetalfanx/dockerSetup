@@ -1,25 +1,20 @@
 FROM opensuse/leap:15.6
-#FROM opensuse/tumbleweed
 LABEL maintainer="Xmetalfanx@yahoo.com"
 
-#RUN zypper install sudo
+RUN useradd -ms /bin/bash xmetal
 
+USER xmetal
+WORKDIR /home/xmetal
 
-#RUN useradd -ms /bin/bash xmetal
-
-#USER xmetal
-#WORKDIR /home/xmetal
-
-#RUN usermod -aG wheel xmetal
+# RUN usermod -aG wheel xmetal
 
 # Upgrade 
-# up for leap 
-# dup for tumbleweed 
-#RUN zypper up
-#RUN zypper dup 
+RUN zypper --non-interactive ref && \
+    zypper --non-interactive up && \
+    zypper clean --all
 
 # Some software needed for my scripts
-# RUN zypper install curl wget lsb lsb-release nano git inxi
+RUN zypper install curl wget lsb lsb-release  git inxi
 
 # get scripts
-# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup
+RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup
