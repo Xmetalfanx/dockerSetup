@@ -1,0 +1,40 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - master  # or the branch you want to track
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro-version:
+          - ubuntu-focal
+          - ubuntu-noble
+          - debian-bullseye
+          - debian-bookworm
+          # add other distro-version combinations as needed
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Parse distro and version
+        run: |
+          IFS='-' read -r DISTRO VERSION <<< "${{ matrix.distro-version }}"
+          echo "DISTRO=$DISTRO" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Set Docker build context
+        run: cd $DISTRO/$VERSION
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Build Docker image
+        run: docker build -t yourdockerhubusername/linux-envs:${{ matrix.distro-version }} $DISTRO/$VERSION
+
+      - name: Push Docker image
+        run: docker push yourdockerhubusername/linux-envs:${{ matrix.distro-version }}
