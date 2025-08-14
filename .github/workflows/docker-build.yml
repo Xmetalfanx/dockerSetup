@@ -19,6 +19,7 @@ jobs:
           - opensuse-leap156
           - opensuse-tumbleweed
           - ubuntu-focal
+          - ubuntu-jammy
           - ubuntu-noble
           
           #  - debian-bullseye
