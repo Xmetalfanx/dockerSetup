@@ -20,10 +20,19 @@ USER xmetal
 WORKDIR /home/xmetal
 
 # Some software needed for my scripts
-# a problem too? 
+# a problem too?
 RUN sudo zypper --non-interactive install curl wget lsb-release git inxi
 
-# get scripts
-RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/xmetal/Downloads/linuxSetup
+# install zsh
+RUN sudo zypper --non-interactive install zsh
 
-RUN cd /home/xmetal/Downloads/linuxSetup
+# install zap package manager
+RUN zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+
+# start zsh
+RUN zsh
+
+# get scripts
+# RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/xmetal/Downloads/linuxSetup
+
+# RUN cd /home/xmetal/Downloads/linuxSetup
