@@ -16,7 +16,6 @@ RUN apt install -y curl wget lsb-release git inxi
 
 # Install zsh - not really needed 
 RUN apt install -y zsh
-RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # USER xmetal
 # WORKDIR /home/xmetal
