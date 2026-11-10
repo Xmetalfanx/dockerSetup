@@ -4,12 +4,21 @@ LABEL maintainer="Xmetalfanx@yahoo.com"
 # Determine fastest Mirror for dnf
 RUN echo "fastestmirror=true" >> /etc/dnf/dnf.conf
 
-# Upgrade 
+# Upgrade
 RUN dnf upgrade -y
 
 # Some software needed for my scripts
-## redhat-lsb-core may be wrong ... lsb_release maybe the new package
-RUN dnf install curl wget redhat-lsb git inxi -y
+# cleanup afterwards
+RUN dnf install curl wget redhat-lsb git inxi -y && dnf clean all
 
-# get scripts 
+# install zsh
+RUN dnf install zsh -y && dnf clean all
+
+# install zap package manager
+RUN zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+
+# start zsh
+RUN zsh
+
+# get scripts
 # RUN git clone -b development https://github.com/Xmetalfanx/linuxSetup.git /home/linuxSetup
