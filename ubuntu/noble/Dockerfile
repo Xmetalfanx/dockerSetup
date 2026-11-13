@@ -26,7 +26,10 @@ RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # install zap package manager
-RUN zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+# different due to dash being used instead of bash
+RUN curl -fsSL https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh -o /tmp/install.zsh \
+    && zsh /tmp/install.zsh --branch release-v1 \
+    && rm /tmp/install.zsh
 
 
 # get scripts
